@@ -1,0 +1,94 @@
+
+body{
+    background-image: linear-gradient(90deg, #2af598 0%, #009efd 100%);
+}
+
+/* Container for the stars */
+.star-rating-container {
+    text-align: center;
+    font-family: "Arial", sans-serif;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  /* Title styling */
+  .star-rating-container h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Stars wrapper */
+  .stars {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Base star styles */
+  .star {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, color 0.3s ease;
+  }
+  
+  /* Selected or hovered stars (large & gold color) */
+  .selected {
+    color: #FFD700; /* Gold color */
+    font-size: 2.8rem; /* Larger size */
+    transform: scale(1.1); /* Slight zoom-in effect */
+  }
+  
+  /* Unselected stars (small & gray color) */
+  .unselected {
+    color: #ccc; /* Gray color */
+    font-size: 2rem; /* Smaller size */
+  }
+  
+  /* Star hover effect */
+  .star:hover {
+    transform: scale(1.2); /* Bigger on hover */
+    color: #FFD700;
+  }
+  
+  /* Rating text below the stars */
+  .rating-text {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Make it responsive */
+  @media (max-width: 480px) {
+    .star-rating-container {
+      padding: 15px;
+      max-width: 300px;
+    }
+    
+    .stars {
+      gap: 5px;
+    }
+    
+    .star {
+      font-size: 2rem;
+    }
+  
+    .selected {
+      font-size: 2.4rem;
+    }
+    
+    .rating-text {
+      font-size: 1rem;
+    }
+  }
+
+  .heading{
+    text-align: center;
+    margin-top: 70px;
+    font-size: xx-large;
+  }

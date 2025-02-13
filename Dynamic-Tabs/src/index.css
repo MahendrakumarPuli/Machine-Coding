@@ -1,0 +1,97 @@
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tab {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #ddd;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .tab a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .add-btn {
+    background: #28a745;
+    color: white;
+    font-size: 20px;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .content {
+    margin-top: 20px;
+    width: 80%;
+  }
+  
+
+  .page-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .page-container img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  
+  .page-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .page-container li {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .heading{
+    text-align: center;
+  }
+
+  body{
+    background: #E8CBC0;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #636FA4, #E8CBC0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  

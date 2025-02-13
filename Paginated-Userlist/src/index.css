@@ -1,0 +1,39 @@
+body{
+  background-color: #85FFBD;
+background-image: linear-gradient(90deg, #85FFBD 0%, #FFFB7D 100%);
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.user-list {
+  
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.user-card {
+  background-color: black;
+}
+
+.heading{
+  color: aqua;
+}
+.pagination {
+  margin-top: 10px;
+}
+
+.pagination button {
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.image{
+  border: solid 2px white;
+  border-radius: 50%;
+
+}
