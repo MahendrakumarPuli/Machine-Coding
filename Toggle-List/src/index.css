@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    transition: background 0.3s ease;
+    background: #43cea2;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #185a9d, #43cea2);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #185a9d, #43cea2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  }
+  
+  /* App Container */
+  .App {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  /* Toggle Button */
+  #toggleViewBtn {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #toggleViewBtn:hover {
+    background-color: #45a049;
+  }
+  
+  /* Product Container */
+  .product-container {
+    display: flex;
+    gap: 20px;
+    transition: all 0.5s ease;
+  }
+  
+  /* List View */
+  .product-container.list-view {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  /* Grid View */
+  .product-container.grid-view {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  /* Product Card */
+  .product-card {
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    align-items: center;
+  }
+  
+  .product-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* List View Product Card */
+  .list-view .product-card {
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Grid View Product Card */
+  .grid-view .product-card {
+    flex-direction: column;
+    width: 300px;
+  }
+  
+  /* Product Image */
+  .product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
+  
+  /* List View Image */
+  .list-view .product-image {
+  margin: 20px;
+  }
+  
+  /* Product Info */
+  .product-info {
+    padding: 20px;
+    text-align: left;
+  }
+  
+  .product-info h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .product-info p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #4caf50;
+  }
+  
