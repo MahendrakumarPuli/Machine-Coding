@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaThLarge, FaList } from "react-icons/fa";
+import { FaThLarge, FaList, FaShoppingCart } from "react-icons/fa";
 
 // Sample product list
 const productsList = [
@@ -18,17 +18,29 @@ const productsList = [
 const App = () => {
   // State to manage view mode (true = Grid View, false = List View)
   const [isGridView, setIsGridView] = useState(() => {
-    // Retrieve saved view mode from localStorage or default to false (List View)
     return localStorage.getItem("isGridView") === "true";
   });
 
-  // Save the view preference in local storage when it changes
+  // State to track cart items
+  const [cart, setCart] = useState([]);
+
+  // Save the view preference in localStorage
   useEffect(() => {
     localStorage.setItem("isGridView", isGridView);
   }, [isGridView]);
 
   // Toggle between List and Grid view
   const toggleView = () => setIsGridView((prev) => !prev);
+
+  // Add item to the cart
+  const addToCart = (product) => {
+    if (!cart.some((item) => item.id === product.id)) {
+      setCart([...cart, product]);
+      alert(`${product.name} added to cart!`);
+    } else {
+      alert(`${product.name} is already in the cart!`);
+    }
+  };
 
   return (
     <div className="App">
@@ -48,8 +60,19 @@ const App = () => {
             <div className="product-info">
               <h2>{product.name}</h2>
               <p>{product.price}</p>
+              <button className="add-to-cart-btn" onClick={() => addToCart(product)}>
+                <FaShoppingCart /> Add to Cart
+              </button>
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Cart Display */}
+      <div className="cart-info">
+        <h2>🛒 Cart ({cart.length} items)</h2>
+        {cart.map((item) => (
+          <p key={item.id}>{item.name} - {item.price}</p>
         ))}
       </div>
     </div>
